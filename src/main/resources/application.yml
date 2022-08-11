@@ -1,0 +1,54 @@
+server:
+  shutdown: graceful
+spring:
+  datasource:
+    url:  jdbc:mysql://3.35.135.214:3306/test
+    username: fistest
+    password: fistest1207
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # 작성자: 원보라, 작성내용: swagger 라이브러리 오류 방지
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  # 작성자: 원보라, 작성내용: agent 사진 multipart
+  servlet:
+    multipart:
+      max-file-size: 20MB #최대 파일 사이즈 20MB
+
+  # 작성자: 고준영, 작성내용: mialjet, mailplug 사용할 수 있고, mailplug 선택함
+  mail:
+    host: smtp.mailplug.co.kr
+    port: 465
+    username: fis182@fisolution.co.kr
+    password: fis1234*
+    properties:
+      "mail.smtp.ssl.enable": true
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  #          ssl:
+  #            enable: true
+  # 작성자 이승범, 작성내용: naver map api secret key 숨기기위해 yml파일 새로파서 include
+  profiles:
+    include:
+      - map
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # 작성자 이승범 ddl-auto: create-drop 해놓음
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        default_batch_fetch_size: 100
+#  작성자 이승범 graceful shutdown을 위한 설정
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+
+logging:
+  level:
+    org.hibernate.SQL: info
+    org.hibernate.Type: info

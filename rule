@@ -1,0 +1,31 @@
+1. controller 추가 하면 안됨 메서드 추가 없음 메서드 타입, 매개변수 수정가능
+2. service 메서드 추가 가능 기존 메서드 삭제는 불가능 매개변수 변경 하능 타입 수정가능
+3. 엔티티 수정시 협의 필요 + 스키마 참고해서 스키마 자료로 column이름 정함 추가로 요구사항에서 콜직원 입력할때마다 시간 쳐바ㅣㄱ히니까 @superclass 쓰던 하셈
+4. repository는 추가적으로 나오기 불가능 entity 별로 나오는 것임 => 내부로직은 알아서 구현 findbyid find all 등등
+
+<<<<<<< HEAD
+test test
+
+origin => git 저장소 github remote origin origin feature/내가 만든거
+1 브랜치 만들기 전에 풀
+2 브랜치 만들고 작업하고 commit 몇번씩 해도 되고
+3 다시 풀하고 푸시전 origin develop
+4 푸시 origin feature /fdsfdsf
+5
+
+
+git checkout develop
+git pull origin develop
+git checkout -b feature/기능…/..
+코딩하고
+git add .
+git commit -m ""
+git push origin feature/기능…/..
+깃헙가서 pull request 를 develop에게 !!!
+
+1. repository 구현체 만들어 놓기 => 메서드만 쳐놔
+
+
+=======
+test test
+>>>>>>> f450882d4e3deddd6e2f767a3d1214d31fd8d173

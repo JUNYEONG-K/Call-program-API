@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    url:  jdbc:h2:tcp://localhost/~/fis_police
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+# 작성자: 고준영, 작성내용: mailjet 의 smtp를 사용하였다. 하루, 한달 전송량의 제한이 있으므로 업데이트 하고 싶으면 유료 결제를 통해 업그레이드 해야함;
+  mail:
+    host: in-v3.mailjet.com
+    port: 587
+    username: 08ff5f7d208344096424c604592c269d
+    password: c22bec8b320b751649dcdd36322531d3
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+# 작성자 이승범, 작성내용: naver map api secret key 숨기기위해 yml파일 새로파서 include
+  profiles:
+    include:
+      - map
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop # 작성자 이승범 ddl-auto: create-drop 해놓음
+    properties:
+      hibernate:
+        #show_sql: true
+        format_sql: true
+        default_batch_fetch_size: 100
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.Type: trace
+    org.apache.coyote.http11: debug
+
+
+

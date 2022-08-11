@@ -1,0 +1,9 @@
+naver:
+  client:
+    id: vb8g27znp3
+    secret: bhHCdnH16NmR7gKtKY5qPaUL6nG1YTFMWcT4JlLX
+kakao:
+  client:
+    key: b72cead56316140565c601f7ecb6dadf
+  redirect:
+    uri: http://localhost:3000/kakao/login
