@@ -20,8 +20,8 @@ spring:
   mail:
     host: smtp.mailplug.co.kr
     port: 465
-    username: fis182@fisolution.co.kr
-    password: fis1234*
+    username:
+    password:
     properties:
       "mail.smtp.ssl.enable": true
       mail:
